@@ -6,21 +6,21 @@ export default function Programa() {
   const [dia, setDia] = useState("dia1");
 
   return (
-    <section className="ayc-section ayc-section-dark" id="programa">
+    <section className="ayc-section ayc-section-programa " id="programa">
       <div className="ayc-container">
-        <p className="ayc-section-tag light">Programa</p>
         <h2 className="ayc-h2 ayc-h2-light" style={{ maxWidth: 500 }}>
-          Dos dias de dialogo, ciencia y accion forestal
+          Programa
         </h2>
+        <span className="ayc-section-tag light"></span>
 
         <div className="ayc-day-tabs">
-          {["dia1", "dia2"].map((d, i) => (
+          {["dia1"].map((d, i) => (
             <button
               key={d}
               className={`ayc-day-tab ${dia === d ? "active" : ""}`}
               onClick={() => setDia(d)}
             >
-              {i === 0 ? "Viernes 11" : "Sabado 12"}
+              {i === 0 ? "Viernes 29" : ""}
             </button>
           ))}
         </div>
@@ -32,7 +32,7 @@ export default function Programa() {
               <div className="ayc-prog-titulo">{item.titulo}</div>
               {item.tipo && <div className="ayc-prog-tipo">{item.tipo}</div>}
             </div>
-            <Badge tipo={item.badge} />
+            {/* <Badge tipo={item.badge} /> */}
           </div>
         ))}
       </div>

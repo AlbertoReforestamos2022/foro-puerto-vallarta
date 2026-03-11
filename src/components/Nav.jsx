@@ -20,18 +20,18 @@ export default function Nav({ page, goPage, menuOpen, setMenuOpen }) {
         <button className="ayc-nav-btn" onClick={() => scrollTo("sobre")}>
           Sobre el evento
         </button>
+        <button className="ayc-nav-btn" onClick={() => scrollTo("ponentes")}>
+          Ponentes
+        </button>        
         <button className="ayc-nav-btn" onClick={() => scrollTo("programa")}>
           Programa
         </button>
-        <button className="ayc-nav-btn" onClick={() => scrollTo("ponentes")}>
-          Ponentes
-        </button>
-        <button
+        {/* <button
           className={`ayc-nav-btn ${page === "toolkit" ? "active" : ""}`}
           onClick={() => goPage("toolkit")}
         >
           Toolkit
-        </button>
+        </button> */}
         <button
           className={`ayc-nav-btn ayc-nav-cta ${page === "registro" ? "active" : ""}`}
           onClick={() => goPage("registro")}

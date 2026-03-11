@@ -1,9 +1,9 @@
 
-export default function Footer() {
+export default function Footer({ goPage }) {
     return(
         <footer className="ayc-footer">
             <div className="ayc-footer-logo">
-                Foro Puerto Vallarta . <em>Reforestamos México</em>
+                Logos alianza
             </div>
 
             <div className="ayc-footer-social">
@@ -16,7 +16,7 @@ export default function Footer() {
 
             <div className="ayc-footer-links">
                 <a href="#">Aviso de privacidad</a>
-                <a href="#">Contacto</a>
+                <a onClick={() => goPage("registro")}>Registro</a>
                 <a href="https://www.reforestamosmexico.org" target="_blank" rel="noreferrer">Reforestamos México</a>
 
             </div>

@@ -1,25 +1,29 @@
-import { PONENTES } from "../../data/ponentes";
+import { INVITADOS } from "../../data/ponentes";
 
 export default function Ponentes() {
     return(
         <section className="ayc-section" id="ponentes"> 
             <div className="ayc-container">
-                <p className="ayc-section-tag">Ponentes</p>
-                <h2 className="ayc-h2">Voces que transforman.</h2>
+                
+                <h2 className="ayc-h2">Invitados especiales</h2>
+                <span className="ayc-section-tag"></span>
 
                 <div className="ayc-ponentes-grid">
-                    {PONENTES.map((p)=> (
-                        <div key={p.nombre} className="ayc-ponente-card">
-                            <div className="ayc-ponente-foto" style={{ background: p.bg }}>
-                                {p.emoji}
+                    {INVITADOS.map((i)=> (
+                        <div key={i.nombre} className="ayc-ponente-card">
+                            <div className="ayc-ponente-foto" style={{ background: i.bg }}>
+                                {i.emoji}
                             </div>
 
                             <div className="ayc-ponente-info">
-                                <div className="ayc-ponente-nombre"> {p.nombre} </div>
-                                <div className="ayc-ponente-tema"> {p.tema}</div>
+                                <div className="ayc-ponente-nombre"> {i.nombre} </div>
+                                <div className="ayc-ponente-tema"> {i.tema}</div>
                                 <div className="ayc-ponente-pais">
-                                    <i className="fa fa-globe-americas"/> {p.pais}
+                                    <i className="fa fa-globe-americas"/> {i.pais}
                                 </div>
+                                <div className="ayc-ponente-pais">
+                                    {i.organizacion}
+                                </div>                                
                             </div>
                         </div>
                     ))}

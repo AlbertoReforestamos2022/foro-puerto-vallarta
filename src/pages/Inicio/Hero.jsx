@@ -9,29 +9,31 @@ export default function Hero({ goPage }) {
       <span className="ayc-leaf" style={{ top: "25%", right: "7%", animationDelay: "1.5s" }}>🌿</span>
       <span className="ayc-leaf" style={{ top: "65%", right: "5%", fontSize: "2rem", animationDelay: "5s" }}>🍃</span>
 
-      <span className="ayc-tag"><i className="fa fa-leaf" /> &nbsp; Reforestamos Mexico</span>
+      {/* <span className="ayc-tag"><i className="fa fa-leaf" /> Reforestamos Mexico</span> */}
 
-      <h1>Bosques y arboles urbanos<br /><em>como derecho humano</em></h1>
+
+    <div className="ayc-hero-intro-section">
+      <h1>En el marco del Foro:<br /> Arbolado Urbano <br /><em>como Semilla de la Resiliencia</em></h1>
 
       <p className="ayc-hero-sub">
-        Un encuentro nacional para reimaginar nuestras ciudades como espacios vivos,
-        donde los arboles son infraestructura esencial y patrimonio colectivo.
+
       </p>
 
       <div className="ayc-hero-fecha">
-        <i className="fa fa-calendar-alt" /> &nbsp; 11 y 12 de julio 2025 · Puerto Vallarta
+        <i className="fa fa-calendar-alt" /> &nbsp; 28 y 29 de mayo del 2026 · Hotel Velas Vallarta
       </div>
 
       <div className="ayc-hero-btns">
         <button className="ayc-btn-primary" onClick={() => goPage("registro")}>
           <i className="fa fa-ticket-alt" /> Registrarme
         </button>
-        <button className="ayc-btn-secondary" onClick={() => goPage("toolkit")}>
+        {/* <button className="ayc-btn-secondary" onClick={() => goPage("toolkit")}>
           <i className="fa fa-box-open" /> Ver Toolkit
-        </button>
-      </div>
+        </button> */}
+      </div>      
+    </div>
 
-      <div className="ayc-stats-strip">
+      {/* <div className="ayc-stats-strip">
         {[
           ["27",    "Ciudades Arbol en Mexico"],
           ["+295K", "Arboles plantados 2025"],
@@ -43,7 +45,7 @@ export default function Hero({ goPage }) {
             <div className="ayc-stat-lbl">{l}</div>
           </div>
         ))}
-      </div>
+      </div> */}
     </section>
   );
 }

@@ -8,7 +8,7 @@ import PageToolkit from './pages/Toolkit';
 
 
 export default function App() {
-  const [page, setPage] = useState("Inicio"); 
+  const [page, setPage] = useState("inicio"); 
   const [menuOpen, setMenuOpen] = useState(false); 
 
 
@@ -24,9 +24,9 @@ export default function App() {
       <Nav page={page} goPage={goPage} menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
 
       <div style={{ paddingTop: 70 }}>
-        {page === "inicio" && <PageInicio goPage={goPage} />}
+        {page === "inicio"   && <PageInicio goPage={goPage}   />}
         {page === "registro" && <PageRegistro goPage={goPage} />}
-        {page === "toolkit" && <PageToolkit goPage={goPage} />}
+        {page === "toolkit"  && <PageToolkit goPage={goPage}  />}
       </div>
     </div>  
   );  

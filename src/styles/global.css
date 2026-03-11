@@ -8,6 +8,7 @@
   --c-crema:   #f7f4ef;
   --c-blanco:  #ffffff;
   --c-texto:   #2e2e2e;
+  --c-verde-rm : #036935; 
 }
 
 
@@ -45,7 +46,7 @@ a {
     left: 0;
     right: 0;
     z-index: 100;
-    background: rgba(26, 61, 56, .96);
+    background: var(--c-blanco);
     backdrop-filter: blur(12px);
     display: flex;
     align-items: center;
@@ -96,7 +97,7 @@ a {
     background: none;
     border: none;
     cursor: pointer;
-    color: rgba(255, 255, 255, .75);
+    color: var(--c-verde-rm);
     font-family: 'DM Sans', sans-serif;
     font-size: .85rem ;
     font-weight: 500;
@@ -143,8 +144,8 @@ a {
 .ayc-hero {
     min-height: 100vh;
     background:
-        linear-gradient(to bottom, rgba(26,61,56,.72) 0%, rgba(26,61,56,.58) 60%, rgba(26,61,56,.88) 100%),
-        url('https://images.unsplash.com/photo-1448375240586-882707db888b?w=1800&q=80') center/cover no-repeat;
+        linear-gradient(to bottom, rgba(26, 61, 56, 0.623) 0%, rgba(26, 61, 56, 0.432) 60%, rgba(26, 61, 56, 0.616) 100%),
+        url('../imgs/bacgroundPrincipal.png') center/cover no-repeat;
     display: flex; 
     flex-direction: column;
     justify-content: center;
@@ -189,6 +190,12 @@ a {
     border-radius: 30px; 
     margin-bottom: 1.5rem;
     animation: ayc-up .8s ease both;
+}
+
+.ayc-hero-intro-section {
+  backdrop-filter: blur(15px);
+  padding: 30px;
+  border-radius: 20px;
 }
 
 .ayc-hero h1 {
@@ -283,7 +290,7 @@ a {
     bottom: 0; 
     left: 0; 
     right: 0;
-    background: rgba(26,61,56,.9); 
+    background: var(--c-verde-rm); 
     backdrop-filter: blur(8px);
     display: flex; 
     justify-content: center;
@@ -322,7 +329,9 @@ a {
 
 .ayc-section-cream { background: var(--c-crema); }
 
-.ayc-section-dark  { background: var(--c-oscuro); }
+.ayc-section-dark  { background: var(--c-verde-rm); }
+
+.ayc-section-programa { background: linear-gradient(rgba(0,0,0,.1), rgba(0,0,0,.1)), url('../imgs/programabackground.png') center / cover no-repeat; }
 
 .ayc-container { max-width: 1100px; margin: 0 auto; }
 
@@ -333,20 +342,25 @@ a {
   color: var(--c-naranja); margin-bottom: .8rem;
 }
 
-.ayc-section-tag::before {
+/* .ayc-section-tag::before {
   content: ''; display: block;
-  width: 20px; height: 2px; background: var(--c-naranja);
-}
+  width: 200px; height: 2px; background: var(--c-naranja);
+} */
 
 .ayc-section-tag.light { color: var(--c-claro); }
 
 .ayc-section-tag.light::before { background: var(--c-claro); }
 
 .ayc-h2 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'DM Sans', sans-serif;
   font-size: clamp(1.8rem, 3.5vw, 2.8rem);
-  font-weight: 700; line-height: 1.18;
+  font-weight: 800; line-height: 1.18;
   color: var(--c-oscuro); margin-bottom: 1rem;
+}
+
+.ayc-h2::after {
+  content: ''; display: block;
+  width: 200px; height: 4px; margin-top: 10px; background: var(--c-naranja);
 }
 
 .ayc-h2-light { color: #fff; }
@@ -368,7 +382,7 @@ a {
 }
 
 .ayc-sobre-img img {
-  width: 100%; height: 380px; object-fit: cover; display: block;
+  width: 100%; object-fit: cover; display: block;
 }
 
 .ayc-sobre-img::after {
@@ -411,7 +425,8 @@ a {
 }
 
 .ayc-prog-item {
-  background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1);
+  backdrop-filter: blur(15px);
+  background: rgba(26, 143, 176, .17); border: 1px solid rgba(255,255,255,.1);
   border-radius: 12px; padding: 1.1rem 1.4rem;
   display: flex; align-items: flex-start; gap: 1.2rem;
   margin-bottom: .9rem; transition: background .2s;
@@ -554,7 +569,7 @@ a {
   border-left: 4px solid var(--c-azul); transition: transform .2s;
 }
 
-.ayc-q-card:hover { transform: translateX(4px); }
+.ayc-q-card:hover { transform: translateY(4px); }
 
 .ayc-q-card.orange { border-left-color: var(--c-naranja); }
 
@@ -763,7 +778,7 @@ select.ayc-input {
 /* ==============================================================
    FOOTER
 ================================================================= */
-.ayc-footer { background: var(--c-oscuro); padding: 3rem 2rem 2rem; text-align: center; }
+.ayc-footer { background: var(--c-naranja); padding: 3rem 2rem 2rem; text-align: center; }
 
 
 .ayc-footer-logo {
@@ -821,7 +836,7 @@ select.ayc-input {
   .ayc-nav-links {
     display: none; flex-direction: column;
     position: fixed; top: 70px; left: 0; right: 0;
-    background: rgba(26,61,56,.98);
+    background: var(--c-verde-rm);
     padding: 1.5rem; gap: .5rem;
   }
 

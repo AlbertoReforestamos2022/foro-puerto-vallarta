@@ -12,8 +12,8 @@ export default function PageInicio({ goPage }) {
         <>
             <Hero goPage={goPage} />
             <Sobre />
-            <Programa />
             <Ponentes />
+            <Programa />
             <RegistroCard goPage={goPage} />
             <Footer /> 
         </>

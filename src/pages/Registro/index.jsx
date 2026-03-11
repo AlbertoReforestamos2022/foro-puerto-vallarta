@@ -80,6 +80,15 @@ export default function PageRegistro({ goPage }) {
                                 />
                                 )}
 
+                                {q.tipo === "number" && (
+                                <input
+                                    type="number"
+                                    className="ayc-input"
+                                    placeholder={q.placeholder}
+                                    required={q.required}
+                                />
+                                )}                                
+
                                 {q.tipo === "email" && (
                                 <input
                                     type="email"

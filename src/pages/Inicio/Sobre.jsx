@@ -1,4 +1,5 @@
 import Reveal from "../../components/Reveal";
+import imagenSobre from '../../imgs/CAJAAGUA.png'; 
 
 export default function Sobre() {
   return (
@@ -8,17 +9,18 @@ export default function Sobre() {
           <div className="ayc-sobre-grid">
             <div className="ayc-sobre-img">
               <img
-                src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=700&q=80"
+                src={imagenSobre}
                 alt="Arboles urbanos"
               />
             </div>
             <div>
-              <p className="ayc-section-tag">Sobre el evento</p>
+              
               <h2 className="ayc-h2">Un espacio para pensar las ciudades que queremos</h2>
+              <span className="ayc-section-tag"></span>
+
               <p className="ayc-body">
-                Ciudad Arbol 2025 es el encuentro iberoamericano de arbolado urbano,
-                donde gobiernos, comunidades, academia y sector privado construyen juntos
-                la agenda verde de nuestras ciudades.
+                Consolidar el Foro TCW Puerto Vallarta 2026 como el espacio de referencia en América Latina sobre resiliencia climática y arbolado urbano, 
+                articulando liderazgo municipal, innovación tecnológica, política pública y cooperación internacional. 
               </p>
               <div className="ayc-pilares">
                 {[
