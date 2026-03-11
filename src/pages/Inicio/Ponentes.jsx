@@ -12,7 +12,7 @@ export default function Ponentes() {
                     {INVITADOS.map((i)=> (
                         <div key={i.nombre} className="ayc-ponente-card">
                             <div className="ayc-ponente-foto" style={{ background: i.bg }}>
-                                {i.emoji}
+                                <img src={ i.img } alt="" />
                             </div>
 
                             <div className="ayc-ponente-info">

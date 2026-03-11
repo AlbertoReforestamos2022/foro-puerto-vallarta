@@ -1,4 +1,5 @@
 import { C } from "../styles/tokens";
+import { fotoErnesto } from "../imgs";
 
 export const INVITADOS = [
   {
@@ -15,6 +16,7 @@ export const INVITADOS = [
     pais: "México",
     organizacion: "Reforestamos México",
     emoji: "Ernesto",
+    img: `${fotoErnesto}`,
     bg: `linear-gradient(135deg, #b34d00, ${C.naranja})`,
   },
   {

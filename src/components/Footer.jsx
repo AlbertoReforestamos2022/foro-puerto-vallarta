@@ -1,9 +1,10 @@
+import {  logoReforestamos, logoArborDay, logoTCOW, logoPuertoVallarta, LogosJuntos } from '../imgs'; 
 
 export default function Footer({ goPage }) {
     return(
         <footer className="ayc-footer">
             <div className="ayc-footer-logo">
-                Logos alianza
+                <img src={ LogosJuntos }  alt="Logos foro" />
             </div>
 
             <div className="ayc-footer-social">

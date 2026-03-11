@@ -1,5 +1,6 @@
 import { C } from "../../styles/tokens";
 import Reveal from "../../components/Reveal";
+import { backgroundPtincipal } from '../../imgs'; 
 
 export default function RegistroCard({goPage}) {
     return(
@@ -26,6 +27,7 @@ export default function RegistroCard({goPage}) {
                                 label:  "Registro al Evento",
                                 icon:   "fa-tree",
                                 bg:     `linear-gradient(135deg, #3d6b63, ${C.medio})`,
+                                imgBg:  `${backgroundPtincipal}`,
                                 btnBg:  C.naranja,
                                 desc:   "Accede a las conferencias magistrales, paneles de discusion, ceremonia de reconocimiento y la reforestacion masiva del sabado.",
                             },
@@ -38,7 +40,7 @@ export default function RegistroCard({goPage}) {
                             // },
                         ].map((r)=> (
                             <div key={r.label} className="ayc-reg-card" >
-                                <div className="ayc-reg-bg" style={{ background: r.bg }}>
+                                <div className="ayc-reg-bg" style={{ background: `url(${r.imgBg}) center/cover no-repeat` }}>
                                     {/* <i className={`fa ${r.icon} ayc-reg-icon`} /> */}
                                     <div className="ayc-reg-title">{r.label}</div>
                                 </div>

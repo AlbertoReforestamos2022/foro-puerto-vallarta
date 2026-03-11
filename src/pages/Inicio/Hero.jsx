@@ -1,36 +1,53 @@
+import { backgroundPtincipal, CAJAAGUA, logoArborDay, logoTCOW, logoPuertoVallarta, LogosJuntos } from '../../imgs'; 
+
 export default function Hero({ goPage }) {
   const scrollRegistro = () =>
     document.getElementById("registro")?.scrollIntoView({ behavior: "smooth" });
 
   return (
     <section className="ayc-hero">
-      <span className="ayc-leaf" style={{ top: "20%", left: "8%" }}>🌿</span>
-      <span className="ayc-leaf" style={{ top: "55%", left: "4%", fontSize: "1.8rem", animationDelay: "3s" }}>🍃</span>
-      <span className="ayc-leaf" style={{ top: "25%", right: "7%", animationDelay: "1.5s" }}>🌿</span>
-      <span className="ayc-leaf" style={{ top: "65%", right: "5%", fontSize: "2rem", animationDelay: "5s" }}>🍃</span>
-
       {/* <span className="ayc-tag"><i className="fa fa-leaf" /> Reforestamos Mexico</span> */}
 
 
     <div className="ayc-hero-intro-section">
-      <h1>En el marco del Foro:<br /> Arbolado Urbano <br /><em>como Semilla de la Resiliencia</em></h1>
+      <h2 className="ayc-hero-sub">
+        Save the date
+      </h2>
+
+      <div className="ayc-hero-subtitle">
+         Entrega de reconocimientos 
+      </div>
+
+      <h2>CIUDAD ARBOL 2025</h2>
+
+      <div className="ayc-hero-title-intro">
+          <h1>En el marco del Foro:<br /> Arbolado Urbano <br /><em>como Semilla de la Resiliencia</em></h1>
+      </div>
 
       <p className="ayc-hero-sub">
-
+        Hotel Velas, Vallarta
       </p>
 
       <div className="ayc-hero-fecha">
-        <i className="fa fa-calendar-alt" /> &nbsp; 28 y 29 de mayo del 2026 · Hotel Velas Vallarta
+         28 y 29 de mayo del 2026
       </div>
 
       <div className="ayc-hero-btns">
-        <button className="ayc-btn-primary" onClick={() => goPage("registro")}>
+        {/* <button className="ayc-btn-primary" onClick={() => goPage("registro")}>
           <i className="fa fa-ticket-alt" /> Registrarme
-        </button>
+        </button> */}
         {/* <button className="ayc-btn-secondary" onClick={() => goPage("toolkit")}>
           <i className="fa fa-box-open" /> Ver Toolkit
         </button> */}
       </div>      
+    </div>
+
+    <div className="ayc-hero-imagen">
+      <img src={ CAJAAGUA } alt="" />
+    </div>
+
+    <div className="ayc-hero-logos">
+          <img src={ LogosJuntos }  alt="" />
     </div>
 
       {/* <div className="ayc-stats-strip">
