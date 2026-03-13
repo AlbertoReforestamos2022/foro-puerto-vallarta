@@ -1,3 +1,7 @@
+---
+render_with_liquid: false
+---
+
 # Estructura del Proyecto — Foro Puerto Vallarta
 
 Contenido completo de cada archivo del proyecto listo para implementar.
