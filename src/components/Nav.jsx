@@ -41,7 +41,9 @@ export default function Nav({ page, goPage, menuOpen, setMenuOpen }) {
       </div>
 
       <button className="ayc-hamburger" onClick={() => setMenuOpen((o) => !o)}>
-        <span /><span /><span />
+        <span />
+        <span />
+        <span />
       </button>
     </nav>
   );

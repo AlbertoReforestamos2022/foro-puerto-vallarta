@@ -130,10 +130,10 @@ a {
 }
 
 .ayc-hamburger span {
-    display: block;
-    width: 24px;
-    height: 2px;
-    background: #fff;
+    display: none;
+    width: 20px;
+    height: 4px;
+    background: var(--c-verde-rm);
     border-radius: 2px;
 }
 
@@ -461,7 +461,7 @@ a {
 /* ==============================================================
    SECCION PROGRAMA
 ================================================================= */
-.ayc-day-tabs { display: flex; gap: .5rem; margin: 2rem 0 1.5rem; }
+.ayc-day-tabs { display: flex; overflow-x: auto; gap: .5rem; margin: 2rem 0 1.5rem; }
 
 .ayc-day-tab {
   background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,1);
@@ -897,13 +897,23 @@ select.ayc-input {
   .ayc-nav-links {
     display: none; flex-direction: column;
     position: fixed; top: 70px; left: 0; right: 0;
-    background: var(--c-verde-rm);
+    background: var(--c-blanco);
+    color: var(--c-verde-rm);
     padding: 1.5rem; gap: .5rem;
   }
 
   .ayc-nav-links.open { display: flex; }
 
-  .ayc-hamburger { display: flex; }
+  .ayc-hamburger { 
+    display: inline-block; 
+    border: none!important;
+  }
+
+  .ayc-hamburger span { 
+    display: block;
+    margin-top: 3px; 
+    margin-bottom: 3px;
+  }
 
   .ayc-section { padding: 60px 1.5rem; }
 
