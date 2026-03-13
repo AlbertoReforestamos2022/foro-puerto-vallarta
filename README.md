@@ -1,7 +1,7 @@
 # Foro Puerto Vallarta
 
 Sitio web para el encuentro iberoamericano de arbolado urbano organizado por Reforestamos Mexico.
-Construido con **React + Vite**, sin dependencias de routing externo.
+Construido con **React + Vite**, sin dependencias de routing externo o externos.
 
 Para la estructura detallada del proyecto, componentes, datos y guia de implementacion consulta [STRUCTURE.md](./STRUCTURE.md).
 
