@@ -1,4 +1,4 @@
-import { backgroundPtincipal, CAJAAGUA, logoArborDay, logoTCOW, logoPuertoVallarta, LogosJuntos } from '../../imgs'; 
+import { backgroundPtincipal, CAJAAGUA, logoArborDay, logoTCOW, logoPuertoVallarta, LogosJuntos, arcosVallarta, arcosPuertoVallartaHero, arcosPuertoVallartaSolo, arcosPuertoVallartaMar, LogosJuntosVerde } from '../../imgs'; 
 
 export default function Hero({ goPage }) {
   const scrollRegistro = () =>
@@ -7,29 +7,32 @@ export default function Hero({ goPage }) {
   return (
     <section className="ayc-hero">
       {/* <span className="ayc-tag"><i className="fa fa-leaf" /> Reforestamos Mexico</span> */}
+      <div className="" style={{ marginBottom: 10 }}>
+        <img src={logoTCOW} width="170" alt="" />
+      </div>
 
 
     <div className="ayc-hero-intro-section">
-      <h2 className="ayc-hero-sub">
+      {/* <h2 className="ayc-hero-sub">
         Save the date
-      </h2>
+      </h2> */}
 
       <div className="ayc-hero-subtitle">
          Entrega de reconocimientos 
       </div>
 
-      <h2>CIUDAD ARBOL 2025</h2>
+      <h2>CIUDAD ÁRBOL 2025</h2>
 
       <div className="ayc-hero-title-intro">
           <h1>En el marco del Foro:<br /> Arbolado Urbano <br /><em>como Semilla de la Resiliencia</em></h1>
       </div>
 
       <p className="ayc-hero-sub">
-        Hotel Velas, Vallarta
+        Hotel Velas Vallarta
       </p>
 
       <div className="ayc-hero-fecha">
-         28 y 29 de mayo del 2026
+         del 27 al 30 de mayo del 2026
       </div>
 
       <div className="ayc-hero-btns">
@@ -43,11 +46,11 @@ export default function Hero({ goPage }) {
     </div>
 
     <div className="ayc-hero-imagen">
-      <img src={ CAJAAGUA } alt="" />
+      <img src={ arcosPuertoVallartaMar } alt="" />
     </div>
 
     <div className="ayc-hero-logos">
-          <img src={ LogosJuntos }  alt="" />
+          <img src={ LogosJuntosVerde }  alt="" />
     </div>
 
       {/* <div className="ayc-stats-strip">

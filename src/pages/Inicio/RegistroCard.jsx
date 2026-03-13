@@ -1,6 +1,6 @@
 import { C } from "../../styles/tokens";
 import Reveal from "../../components/Reveal";
-import { backgroundPtincipal } from '../../imgs'; 
+import { backgroundPtincipalVerde } from '../../imgs'; 
 
 export default function RegistroCard({goPage}) {
     return(
@@ -27,8 +27,8 @@ export default function RegistroCard({goPage}) {
                                 label:  "Registro al Evento",
                                 icon:   "fa-tree",
                                 bg:     `linear-gradient(135deg, #3d6b63, ${C.medio})`,
-                                imgBg:  `${backgroundPtincipal}`,
-                                btnBg:  C.naranja,
+                                imgBg:  `${backgroundPtincipalVerde}`,
+                                btnBg:  C.verderm,
                                 desc:   "Accede a las conferencias magistrales, paneles de discusion, ceremonia de reconocimiento y la reforestacion masiva del sabado.",
                             },
                             // {

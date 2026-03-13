@@ -1,18 +1,13 @@
 import {  logoReforestamos, logoArborDay, logoTCOW, logoPuertoVallarta, LogosJuntos } from '../imgs'; 
+import { logosFooter } from '../imgs/index';
 
 export default function Footer({ goPage }) {
     return(
         <footer className="ayc-footer">
             <div className="ayc-footer-logo">
-                <img src={ LogosJuntos }  alt="Logos foro" />
-            </div>
-
-            <div className="ayc-footer-social">
-                {["fab fa-facebook-f", "fa fa-twitter", "fab fa-instagram", "fab fa-linkedin-in"].map((ic) => (
-                    <button key={ic} className="ayc-social-btn">
-                        <i className={ic} />
-                    </button>
-                ))}
+                {/* {logosFooter.map((logo) => (
+                    <img key={logo.alt} src={logo.src} style={{ width: logo.width }}  alt={logo.alt} />
+                ))} */}
             </div>
 
             <div className="ayc-footer-links">
@@ -23,7 +18,9 @@ export default function Footer({ goPage }) {
             </div>
 
             <div className="ayc-footer-copy">
-                &copy; 2025 Reforestamos México A.C. &middot; Todos los derechos reservados
+                &copy; 2026 Reforestamos México A.C. &middot; 
+                <br />
+                Todos los derechos reservados
             </div>
         </footer>
     )

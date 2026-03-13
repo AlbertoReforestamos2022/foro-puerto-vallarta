@@ -14,13 +14,13 @@ export default function Programa() {
         <span className="ayc-section-tag light"></span>
 
         <div className="ayc-day-tabs">
-          {["dia1"].map((d, i) => (
+          {["dia1", "dia2", "dia3", "dia4"].map((d, i) => (
             <button
               key={d}
               className={`ayc-day-tab ${dia === d ? "active" : ""}`}
               onClick={() => setDia(d)}
             >
-              {i === 0 ? "Viernes 29" : ""}
+              { i === 0 ? "Miércoles 27" : i === 1 ? "Jueves 28" : i === 2 ? "Viernes 29" : "Sábado 30" }
             </button>
           ))}
         </div>

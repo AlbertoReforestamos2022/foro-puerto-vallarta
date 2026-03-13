@@ -1,5 +1,5 @@
 import Reveal from "../../components/Reveal";
-import imagenSobre from '../../imgs/CAJAAGUA.png'; 
+import { arcosVallarta, arcosPuertoVallartaHero  } from '../../imgs'; 
 
 export default function Sobre() {
   return (
@@ -9,7 +9,7 @@ export default function Sobre() {
           <div className="ayc-sobre-grid">
             <div className="ayc-sobre-img">
               <img
-                src={imagenSobre}
+                src={arcosPuertoVallartaHero}
                 alt="Arboles urbanos"
               />
             </div>
@@ -19,14 +19,15 @@ export default function Sobre() {
               <span className="ayc-section-tag"></span>
 
               <p className="ayc-body">
-                Consolidar el Foro TCW Puerto Vallarta 2026 como el espacio de referencia en América Latina sobre resiliencia climática y arbolado urbano, 
-                articulando liderazgo municipal, innovación tecnológica, política pública y cooperación internacional. 
+                Consolidar el Foro Tree Cities of the World México 2026 en Puerto Vallarta como el espacio de referencia en América Latina sobre resiliencia climática y arbolado urbano, 
+                articulando liderazgo municipal, innovación tecnológica, política pública y cooperación internacional.
               </p>
               <div className="ayc-pilares">
+                {/* Poner este array de objetos aparte */}
                 {[
                   ["fa-comments",       "Conferencias magistrales internacionales"],
                   ["fa-users",          "Paneles de discusion ciudadana"],
-                  ["fa-seedling",       "Reforestacion masiva participativa"],
+                  ["fa-seedling",       "Construcción de la ley de bosque y arbolado urbano."],
                   ["fa-graduation-cap", "Capacitaciones tecnicas"],
                 ].map(([ic, txt]) => (
                   <div key={txt} className="ayc-pilar">

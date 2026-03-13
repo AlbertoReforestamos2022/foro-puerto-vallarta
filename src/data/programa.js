@@ -1,5 +1,24 @@
 export const PROGRAMA = {
-  dia1: [
+    dia1: [
+    {
+      hora: "09:00",
+      titulo: "Capacitaciones ténicas (REGISTRO PREVIO)",
+      tipo: "CUPO LIMITADO",
+    },
+  ],
+  dia2: [
+    {
+      hora: "09:00",
+      titulo: "Capacitaciones técnicas",
+      tipo: "CUPO LIMITADO",
+    },
+    {
+      hora: "17:00 - ",
+      titulo: "Rueda de prensa",
+      tipo: "",
+    },
+  ],
+  dia3: [
     {
       hora: "09:00",
       titulo: "Inauguracion oficial",
@@ -51,36 +70,11 @@ export const PROGRAMA = {
       tipo: "",
     }, 
   ],
-  // dia2: [
-  //   {
-  //     hora: "09:00",
-  //     titulo: "Soluciones basadas en la naturaleza para ciudades resilientes",
-  //     tipo: "Pedro Calaza · Espana",
-  //   },
-  //   {
-  //     hora: "10:30",
-  //     titulo: "Crisis hidrica: retos y respuestas desde el territorio",
-  //     tipo: "Mesa: Gallego, Guerrero, Montero, Badano, Douterlungne",
-  //   },
-  //   {
-  //     hora: "12:00",
-  //     titulo: "Taller: Metodologia de diagnostico de arbolado urbano",
-  //     tipo: "Capacitacion tecnica · Cupo limitado",
-  //   },
-  //   {
-  //     hora: "14:00",
-  //     titulo: "Receso / Comida",
-  //     tipo: "",
-  //   },
-  //   {
-  //     hora: "15:30",
-  //     titulo: "Reforestacion masiva · Parque Metropolitano",
-  //     tipo: "Actividad de campo · Traslado incluido",
-  //   },
-  //   {
-  //     hora: "17:30",
-  //     titulo: "Clausura y entrega de constancias",
-  //     tipo: "Ceremonia de cierre",
-  //   },
-  // ],
+  dia4: [
+    {
+      hora: "09:00",
+      titulo: "Recorridos por infraestructura verde, arbolado urbano y estero el Salado",
+      tipo: "Pedro Calaza · Espana",
+    },
+  ],  
 };

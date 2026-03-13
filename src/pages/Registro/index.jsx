@@ -17,16 +17,19 @@ export default function PageRegistro({ goPage }) {
     return (
         <>
             <div className="ayc-diag-hero">
-                <span className="ayc-tag">
+                {/* <span className="ayc-tag">
                     <i className="fa fa-ticket-alt" /> &nbsp; Ciudad Árbol 2025
-                </span>
+                </span> */}
 
-                <h1> Registro al Foro <br />Puerto Vallarta</h1>
+                <h1> 
+                    Registro al Foro <br /> <br /> Arbolado Urbano <br />
+                    <em>como Semilla de la Resiliencia</em>
+                </h1>
 
-                <p>
+                {/* <p>
                     Completa el formulario para asegurar tu lugar en el encuentro
                     iberoamericano de arbolado urbano.
-                </p>
+                </p> */}
             </div>
 
             <div className="ayc-form-container">

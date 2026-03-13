@@ -1,8 +1,8 @@
 export const BLOQUES = {
-  A: { label: "A · Datos personales",              border: "#ff6b00" },
-  B: { label: "B · Participacion en el evento",    border: "#1a8fb0" },
-  C: { label: "C · Perfil profesional",            border: "#ff6b00" },
-  D: { label: "D · Confirmacion",                  border: "#1a8fb0" },
+  A: { label: "A · Datos personales",              border: "#036935" },
+  B: { label: "B · Participacion en el evento",    border: "#036935" },
+  C: { label: "C · Perfil profesional",            border: "#036935" },
+  D: { label: "D · Confirmacion",                  border: "#036935" },
 };
 
 export const PREGUNTAS = [

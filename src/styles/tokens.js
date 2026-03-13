@@ -7,5 +7,6 @@ export const C = {
     naranja: "#ff6b00",
     crema:   "#f7f4ef",
     blanco:  "#ffffff",
-    texto:   "#2e2e2e",    
+    texto:   "#2e2e2e",  
+    verderm: "#036935",  
 }

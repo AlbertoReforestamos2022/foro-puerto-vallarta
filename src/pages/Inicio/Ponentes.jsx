@@ -19,7 +19,7 @@ export default function Ponentes() {
                                 <div className="ayc-ponente-nombre"> {i.nombre} </div>
                                 <div className="ayc-ponente-tema"> {i.tema}</div>
                                 <div className="ayc-ponente-pais">
-                                    <i className="fa fa-globe-americas"/> {i.pais}
+                                    {/* <i className="fa fa-globe-americas"/> {i.pais} */}
                                 </div>
                                 <div className="ayc-ponente-pais">
                                     {i.organizacion}

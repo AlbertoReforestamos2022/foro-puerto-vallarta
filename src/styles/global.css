@@ -53,7 +53,7 @@ a {
     justify-content: space-between;
     padding: 0 2.5rem;
     height: 70px;
-    border-bottom: 2px solid var(--c-naranja);
+    border-bottom: 2px solid var(--c-verde-rm);
 }
 
 .ayc-nav-logo {
@@ -108,12 +108,12 @@ a {
 
 .ayc-nav-btn:hover, 
 .ayc-nav-btn.active {
-    background: var(--c-naranja);
+    background: var(--c-verde-rm);
     color: #ffffff;
 }
 
 .ayc-nav-cta {
-    background: var(--c-naranja)!important;
+    background: var(--c-verde-rm)!important;
     color: #fff!important;
     font-weight: 600!important;
     border-radius: 30px!important;
@@ -144,8 +144,8 @@ a {
 .ayc-hero {
     min-height: 100vh;
     background:
-        linear-gradient(to bottom, rgba(26, 143, 176, .8)0%, rgba(26, 61, 56, 0.6) 60%, rgba(26, 61, 56, 0.7) 100%),
-        url('../imgs/bacgroundPrincipal.png') center/cover no-repeat;
+        linear-gradient(to bottom, rgba(0, 0, 0, .4) 0%, rgba(0, 0, 0, .3) 60%, rgba(0, 0, 0, .2) 100%),
+        url('../imgs/arcos-pv-1024x576.jpg') center/cover  no-repeat;
     display: flex; 
     flex-direction: column;
     justify-content: center;
@@ -180,7 +180,7 @@ a {
 
 .ayc-tag {
     display: inline-block; 
-    background: var(--c-naranja); 
+    background: var(--c-verde-rm); 
     color: #fff;
     font-size: .75rem; 
     font-weight: 600; 
@@ -216,7 +216,7 @@ a {
 .ayc-hero-title-intro::after, .ayc-hero-title-intro::before {
   content: ''; display: block;
   width: 100%; height: 4px; margin-top: 10px; margin-bottom: 10px;
-  background: var(--c-claro);  
+  background: #b1cb36;  
 }
 
 .ayc-hero h1 {
@@ -274,7 +274,7 @@ a {
    BOTONES GLOBALES
 ================================================================= */
 .ayc-btn-primary {
-    background: var(--c-naranja); 
+    background: var(--c-verde-rm); 
     color: #fff;
     font-weight: 600; 
     font-size: .95rem;
@@ -289,9 +289,9 @@ a {
 }
 
 .ayc-btn-primary:hover {
-    background: #d05800; 
+    background: var(--c-oscuro); 
     transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(255,107,0,.4);
+    box-shadow: 0 8px 24px rgba(3, 105, 53, .4);
 }
 .ayc-btn-secondary {
     background: rgba(255,255,255,.12); 
@@ -345,7 +345,7 @@ a {
     backdrop-filter: blur(8px);
     display: flex; 
     justify-content: center;
-    border-top: 2px solid rgba(254,174,34,.4);
+    border-top: 2px solid rgba(3, 105, 53, .4);
 }
 
 .ayc-stat {
@@ -382,7 +382,7 @@ a {
 
 .ayc-section-dark  { background: var(--c-verde-rm); }
 
-.ayc-section-programa { background: linear-gradient(rgba(0,0,0,.1), rgba(0,0,0,.1)), url('../imgs/programabackground.png') center / cover no-repeat; }
+.ayc-section-programa { background: linear-gradient(to bottom, rgba(0,0,0,.4), rgba(0,0,0,.4)), url('../imgs/PuertoVallarta_Boardwalk.jpg') center / cover no-repeat; }
 
 .ayc-container { max-width: 1100px; margin: 0 auto; }
 
@@ -406,12 +406,12 @@ a {
   font-family: 'DM Sans', sans-serif;
   font-size: clamp(1.8rem, 3.5vw, 2.8rem);
   font-weight: 800; line-height: 1.18;
-  color: var(--c-oscuro); margin-bottom: 1rem;
+  color: var(--c-verde-rm); margin-bottom: 1rem;
 }
 
 .ayc-h2::after {
   content: ''; display: block;
-  width: 200px; height: 4px; margin-top: 10px; background: var(--c-naranja);
+  width: 200px; height: 4px; margin-top: 10px; background: #b1cb36;
 }
 
 .ayc-h2-light { color: #fff; }
@@ -451,10 +451,10 @@ a {
   background: #fff; border-radius: 10px; padding: .9rem 1.1rem;
   display: flex; align-items: flex-start; gap: .7rem;
   box-shadow: 0 2px 10px rgba(26,62,56,.13);
-  border-left: 3px solid var(--c-naranja);
+  border-left: 3px solid var(--c-verde-rm);
 }
 
-.ayc-pilar i { color: var(--c-naranja); margin-top: 2px; }
+.ayc-pilar i { color: var(--c-verde-rm); margin-top: 2px; }
 
 .ayc-pilar span { font-size: .82rem; line-height: 1.5; font-weight: 500; }
 
@@ -464,30 +464,29 @@ a {
 .ayc-day-tabs { display: flex; gap: .5rem; margin: 2rem 0 1.5rem; }
 
 .ayc-day-tab {
-  background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.15);
-  color: rgba(255,255,255,.6); font-family: 'DM Sans', sans-serif;
+  background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,1);
+  color: rgba(255,255,255,1); font-family: 'DM Sans', sans-serif;
   font-size: .82rem; font-weight: 500;
   padding: .5rem 1.2rem; border-radius: 30px; cursor: pointer; transition: all .2s;
 }
 
 .ayc-day-tab.active {
-  background: var(--c-naranja); color: #fff;
-  border-color: var(--c-naranja);
+  background: var(--c-verde-rm); color: #fff;
+  border-color: var(--c-verde-rm);
 }
 
 .ayc-prog-item {
   backdrop-filter: blur(15px);
-  background: rgba(26, 143, 176, .17); border: 1px solid rgba(255,255,255,.1);
   border-radius: 12px; padding: 1.1rem 1.4rem;
   display: flex; align-items: flex-start; gap: 1.2rem;
   margin-bottom: .9rem; transition: background .2s;
 }
 
-.ayc-prog-item:hover { background: rgba(255,255,255,.1); }
+.ayc-prog-item:hover { background: rgba(3, 105, 53, .1); }
 
 .ayc-prog-hora {
   font-family: 'Bebas Neue', sans-serif; font-size: 1.1rem;
-  color: var(--c-naranja); min-width: 56px; padding-top: 2px;
+  color: var(--c-blanco); min-width: 56px; padding-top: 2px;
 }
 
 .ayc-prog-titulo { color: #fff; font-weight: 600; font-size: .92rem; margin-bottom: .2rem; }
@@ -513,13 +512,13 @@ a {
 
 .ayc-ponente-card {
   background: #fff; border-radius: 16px; overflow: hidden;
-  box-shadow: 0 4px 20px rgba(26,62,56,.13);
+  box-shadow: 0 4px 20px rgba(3, 105, 53, .13);
   transition: transform .25s, box-shadow .25s;
 }
 
 .ayc-ponente-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 16px 40px rgba(26,61,56,.15);
+  box-shadow: 0 16px 40px rgba(3, 105, 53, .14);
 }
 
 .ayc-ponente-foto {
@@ -536,13 +535,13 @@ a {
 
 .ayc-ponente-info { padding: 1rem 1.1rem 1.2rem; }
 
-.ayc-ponente-nombre { font-weight: 700; font-size: .88rem; color: var(--c-oscuro); margin-bottom: .25rem; }
+.ayc-ponente-nombre { font-weight: 700; font-size: .88rem; color: var(--c-ver); margin-bottom: .25rem; }
 
 .ayc-ponente-tema { font-size: .73rem; color: #777; line-height: 1.45; }
 
 .ayc-ponente-pais {
   display: inline-flex; align-items: center; gap: .3rem;
-  font-size: .65rem; color: var(--c-azul); font-weight: 600;
+  font-size: .65rem; color: var(--c-verde-rm); font-weight: 600;
   margin-top: .5rem; text-transform: uppercase; letter-spacing: .08em;
 }
 
@@ -595,7 +594,7 @@ a {
    PAGINA REGISTRO (formulario)
 ================================================================= */
 .ayc-diag-hero {
-  background: linear-gradient(135deg, var(--c-oscuro) 0%, var(--c-azulOsc) 100%);
+  background: linear-gradient(to bottom, rgba(0,0,0,.4) 0%, rgba(0,0,0,.3) 60%, rgba(0, 0, 0, .2) 100%), url('../imgs/PuertoVallarta_Boardwalk.jpg') center/cover no-repeat;
   padding: 120px 2rem 60px; text-align: center;
 }
 
@@ -622,21 +621,21 @@ a {
 
 .ayc-q-card {
   background: #fff; border-radius: 16px; padding: 2rem 2.2rem;
-  box-shadow: 0 4px 20px rgba(26,62,56,.13); margin-bottom: 1.5rem;
-  border-left: 4px solid var(--c-azul); transition: transform .2s;
+  box-shadow: 0 4px 20px rgba(3, 105, 53, .13); margin-bottom: 1.5rem;
+  /* border-left: 4px solid var(--c-azul); transition: transform .2s; */
 }
 
-.ayc-q-card:hover { transform: translateY(4px); }
+/* .ayc-q-card:hover { transform: translateY(4px); } */
 
-.ayc-q-card.orange { border-left-color: var(--c-naranja); }
+.ayc-q-card.orange { border-left-color: var(--c-verde-rm); }
 
 .ayc-q-num {
   font-family: 'Bebas Neue', sans-serif; font-size: 1rem;
-  color: var(--c-azul); letter-spacing: .1em; margin-bottom: .4rem;
+  color: var(--c-verde-rm); letter-spacing: .1em; margin-bottom: .4rem;
 }
 
 .ayc-q-label {
-  font-weight: 600; color: var(--c-oscuro);
+  font-weight: 600; color: var(--c-verde-rm);
   font-size: .95rem; margin-bottom: 1rem; line-height: 1.5;
 }
 
@@ -648,11 +647,11 @@ a {
 }
 
 .ayc-q-option:hover {
-  border-color: var(--c-azul);
+  border-color: var(--c-verde-rm);
   background: rgba(26,143,176,.05);
 }
 
-.ayc-q-option input { accent-color: var(--c-azul); width: 16px; height: 16px; }
+.ayc-q-option input { accent-color: var(--c-verde-rm); width: 16px; height: 16px; }
 
 .ayc-input {
   width: 100%; padding: .8rem 1rem;
@@ -662,8 +661,8 @@ a {
 }
 
 .ayc-input:focus {
-  outline: none; border-color: var(--c-azul);
-  box-shadow: 0 0 0 3px rgba(26,143,176,.12);
+  outline: none; border-color: rgba(3, 105, 53, .6);
+  box-shadow: 0 0 0 3px rgba(3, 105, 53, .12);
 }
 
 textarea.ayc-input { resize: vertical; min-height: 100px; }
@@ -676,22 +675,22 @@ select.ayc-input {
 }
 
 .ayc-btn-submit {
-  background: var(--c-azul); color: #fff;
+  background: #b1cb36; color: #fff;
   font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 1rem;
   padding: 1rem 3rem; border-radius: 40px; border: none; cursor: pointer;
   transition: all .25s; display: inline-flex; align-items: center; gap: .6rem;
-  box-shadow: 0 8px 24px rgba(26,143,176,.3);
+  box-shadow: 0 8px 14px rgba(0, 0, 0,.3);
 }
 
-.ayc-btn-submit:hover { background: var(--c-azulOsc); transform: translateY(-2px); }
+.ayc-btn-submit:hover { background: rgba(177, 203, 54, .7); transform: translateY(-2px); }
 
 .ayc-success {
   text-align: center; padding: 3rem;
   background: #fff; border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(26,62,56,.13);
+  box-shadow: 0 4px 20px rgba(3, 105, 53, .13);
 }
 
-.ayc-success i { font-size: 3.5rem; color: var(--c-naranja); margin-bottom: 1rem; display: block; }
+.ayc-success i { font-size: 3.5rem; color: var(--c-verde-rm); margin-bottom: 1rem; display: block; }
 
 .ayc-success h3 {
   font-family: 'Playfair Display', serif;
@@ -705,7 +704,7 @@ select.ayc-input {
 ================================================================= */
 .ayc-tk-hero {
   background:
-    linear-gradient(to bottom, rgba(26,61,56,.84) 0%, rgba(26,61,56,.72) 100%),
+    linear-gradient(to bottom, rgba(26,61,56,.84) 0%, rgba(3, 105, 53, .72) 100%),
     url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1800&q=80') center/cover no-repeat;
   padding: 140px 2rem 100px; text-align: center; position: relative;
 }
@@ -735,12 +734,12 @@ select.ayc-input {
 .ayc-paso {
   text-align: center; padding: 1.5rem 1rem;
   background: #fff; border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(26,62,56,.13);
+  box-shadow: 0 4px 20px rgba(3, 105, 53, .13);
 }
 
 .ayc-paso-num {
   width: 48px; height: 48px; border-radius: 50%;
-  background: var(--c-oscuro); color: var(--c-naranja);
+  background: var(--c-oscuro); color: var(--c-verde-rm);
   font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem;
   display: flex; align-items: center; justify-content: center;
   margin: 0 auto .8rem;
@@ -769,14 +768,14 @@ select.ayc-input {
 
 .ayc-recurso {
   background: #fff; border-radius: 16px; padding: 1.6rem 1.8rem;
-  box-shadow: 0 4px 20px rgba(26,62,56,.13);
+  box-shadow: 0 4px 20px rgba(3, 105, 53, .813);
   transition: transform .25s, box-shadow .25s;
   position: relative; overflow: hidden;
 }
 
 .ayc-recurso:hover {
   transform: translateY(-5px);
-  box-shadow: 0 16px 40px rgba(26,61,56,.14);
+  box-shadow: 0 16px 40px rgba(3, 105, 53, .14);
 }
 
 .ayc-recurso-cat {
@@ -811,7 +810,7 @@ select.ayc-input {
 .ayc-btn-dl:hover { background: var(--c-azul); color: #fff; }
 
 .ayc-tk-cta {
-  background: linear-gradient(135deg, var(--c-oscuro), var(--c-azulOsc));
+  background: linear-gradient(135deg, var(--c-oscuro), var(--c-verde-rm));
   border-radius: 20px; padding: 3rem 2.5rem;
   display: grid; grid-template-columns: 1fr auto;
   align-items: center; gap: 2rem; margin: 4rem 0 0;
@@ -830,17 +829,22 @@ select.ayc-input {
   display: inline-flex; align-items: center; gap: .5rem;
 }
 
-.ayc-btn-white:hover { background: var(--c-naranja); color: #fff; }
+.ayc-btn-white:hover { background: var(--c-verde-rm); color: #fff; }
 
 /* ==============================================================
    FOOTER
 ================================================================= */
-.ayc-footer { background: var(--c-naranja); padding: 3rem 2rem 2rem; text-align: center; }
+.ayc-footer { background: var(--c-verde-rm); padding: 3rem 2rem 2rem; text-align: center; }
 
 
 .ayc-footer-logo {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.3rem; color: #fff; margin-bottom: .5rem;
+  display: flex; justify-content: center; align-items: center;
+  gap: 20px;
+}
+
+.ayc-footer-logo img {
+  width: 100%;
+  height: 100%;
 }
 
 .ayc-footer-logo em { color: var(--c-claro); font-style: normal; }
@@ -866,7 +870,7 @@ select.ayc-input {
   transition: all .2s; cursor: pointer; border: none;
 }
 
-.ayc-social-btn:hover { background: var(--c-naranja); color: #fff; }
+.ayc-social-btn:hover { background: var(--c-verde-rm); color: #fff; }
 
 /* ==============================================================
    ANIMACION REVEAL (scroll)

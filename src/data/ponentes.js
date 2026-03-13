@@ -1,13 +1,14 @@
 import { C } from "../styles/tokens";
-import { fotoErnesto } from "../imgs";
+import { fotoErnesto, fotoSophie, fotoIan } from "../imgs";
 
 export const INVITADOS = [
   {
     nombre: "Sophie Plitt ",
     tema: "",
-    pais: "EUA",
+    pais: "USA",
     organizacion: "Arbor Day Foundation",
     emoji: "Sophie",
+    img: `${fotoSophie}`,
     bg: `linear-gradient(135deg, #b34d00, ${C.naranja})`,
   },
   {
@@ -20,18 +21,19 @@ export const INVITADOS = [
     bg: `linear-gradient(135deg, #b34d00, ${C.naranja})`,
   },
   {
-    nombre: "Pedro Calaza",
+    nombre: "Ian Hanou ",
     tema: "",
-    pais: "España",
-    organizacion: "",
+    pais: "USA",
+    organizacion: "CEO Planit Geo",
     emoji: "Pedro",
+    img: `${fotoIan}`,
     bg: `linear-gradient(135deg, #b34d00, ${C.naranja})`,
   },
   {
-    nombre: "Mauricio Lamano",
+    nombre: "Mariano Sanchez",
     tema: "",
-    pais: "Brasil",
-    organizacion: "",
+    pais: "España",
+    organizacion: "Presidente de la Asociación Española de Arboricultura",
     emoji: "Mauricio",
     bg: `linear-gradient(135deg, #b34d00, ${C.naranja})`,
   }
