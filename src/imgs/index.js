@@ -19,7 +19,7 @@ import logoPuertoVallarta  from './logo_vallarta copia blanco.png';
 
 export { logoReforestamos, logoArborDay, logoPuertoVallarta };
 export { default as LogosJuntos       }           from './pleca logos.png';
-export { default as LogosJuntosVerde }            from './logos-foro.png'  
+export { default as LogosJuntosVerde }            from './Logos-foro.png'  
 export {  default as logoTCOW   }                 from './logo tcw blanco.png'
 export {  default as logoReforestamosVerde   }    from './LOGO REFORESTAMOS FONDO TRANSPARENTE.png'
 
