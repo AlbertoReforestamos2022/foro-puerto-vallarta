@@ -25,16 +25,20 @@ export default function Programa() {
           ))}
         </div>
 
-        {PROGRAMA[dia].map((item, i) => (
-          <div key={i} className="ayc-prog-item">
-            <div className="ayc-prog-hora">{item.hora}</div>
-            <div style={{ flex: 1 }}>
-              <div className="ayc-prog-titulo">{item.titulo}</div>
-              {item.tipo && <div className="ayc-prog-tipo">{item.tipo}</div>}
+        <div className="ayc-prog">
+        
+          {PROGRAMA[dia].map((item, i) => (
+            <div key={i} className="ayc-prog-item">
+              <div className="ayc-prog-hora">{item.hora}</div>
+              <div style={{ flex: 1 }}>
+                <div className="ayc-prog-titulo">{item.titulo}</div>
+                {item.tipo && <div className="ayc-prog-tipo">{item.tipo}</div>}
+              </div>
+              {/* <Badge tipo={item.badge} /> */}
             </div>
-            {/* <Badge tipo={item.badge} /> */}
-          </div>
-        ))}
+          ))}          
+        </div>
+
       </div>
     </section>
   );
