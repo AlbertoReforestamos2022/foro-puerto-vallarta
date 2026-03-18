@@ -24,7 +24,7 @@ export default function Hero({ goPage }) {
       <h2>CIUDAD ÁRBOL 2025</h2>
 
       <div className="ayc-hero-title-intro">
-          <h1>En el marco del Foro:<br /> Arbolado Urbano <br /><em>como Semilla de la Resiliencia</em></h1>
+          <h1>En el marco del Foro:<br /> Arbolado Urbano <br /><em>como Semilla de Resiliencia</em></h1>
       </div>
 
       <p className="ayc-hero-sub">

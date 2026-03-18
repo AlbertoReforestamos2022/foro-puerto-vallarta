@@ -552,7 +552,10 @@ a {
    REGISTRO CARD (bloque CTA en pagina Inicio)
 ================================================================= */
 .ayc-reg-grid {
-  display: grid; grid-template-columns: 1fr 1fr;
+  display: grid; 
+  grid-template-columns: minmax(auto, 500px);
+  align-items: center;
+  justify-content: center;
   gap: 2rem; margin-top: 2.5rem;
 }
 
@@ -597,7 +600,7 @@ a {
    PAGINA REGISTRO (formulario)
 ================================================================= */
 .ayc-diag-hero {
-  background: linear-gradient(to bottom, rgba(0,0,0,.4) 0%, rgba(0,0,0,.3) 60%, rgba(0, 0, 0, .2) 100%), url('../imgs/PuertoVallarta_Boardwalk.jpg') center/cover no-repeat;
+  background: linear-gradient(to bottom, rgba(0,0,0,.4) 0%, rgba(0,0,0,.3) 60%, rgba(0, 0, 0, .2) 100%), url('../imgs/bacgroundPrincipal.png') center/cover no-repeat;
   padding: 120px 2rem 60px; text-align: center;
 }
 
@@ -634,7 +637,7 @@ a {
 
 .ayc-q-num {
   font-family: 'Bebas Neue', sans-serif; font-size: 1rem;
-  color: var(--c-verde-rm); letter-spacing: .1em; margin-bottom: .4rem;
+  color: var(--c-naranja); letter-spacing: .1em; margin-bottom: .4rem;
 }
 
 .ayc-q-label {
@@ -678,14 +681,14 @@ select.ayc-input {
 }
 
 .ayc-btn-submit {
-  background: #b1cb36; color: #fff;
+  background: var(--c-naranja); color: #fff;
   font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 1rem;
   padding: 1rem 3rem; border-radius: 40px; border: none; cursor: pointer;
   transition: all .25s; display: inline-flex; align-items: center; gap: .6rem;
   box-shadow: 0 8px 14px rgba(0, 0, 0,.3);
 }
 
-.ayc-btn-submit:hover { background: rgba(177, 203, 54, .7); transform: translateY(-2px); }
+.ayc-btn-submit:hover { background: rgba(255, 107, 0, .7); transform: translateY(-2px); }
 
 .ayc-success {
   text-align: center; padding: 3rem;

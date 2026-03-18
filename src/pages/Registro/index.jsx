@@ -10,6 +10,7 @@ export default function PageRegistro({ goPage }) {
     const [loading,  setLoading]  = useState(false);
     const [error,    setError]    = useState(null);
     const [formData, setFormData] = useState({});
+    const [boletin,  setBoletin]  = useState(false);
 
     const handleChange = (num, value) => {
         setFormData(prev => ({ ...prev, [num]: value }));
@@ -25,8 +26,12 @@ export default function PageRegistro({ goPage }) {
             const registro = { fechaRegistro: serverTimestamp() };
             PREGUNTAS.forEach(q => {
                 registro[`P${q.num}_${q.label}`] = formData[q.num] ?? "";
+                if (q.conditionalText && formData[q.num] === q.conditionalText.trigger) {
+                    registro[`P${q.num}_detalle`] = formData[`${q.num}_extra`] ?? "";
+                }
             });
 
+            registro.boletin = boletin;
             await addDoc(collection(db, "registros"), registro);
             setSubmited(true);
             window.scrollTo({ top: 0, behavior: "smooth" });
@@ -45,7 +50,8 @@ export default function PageRegistro({ goPage }) {
             <div className="ayc-diag-hero">
                 <h1>
                     Registro al Foro <br /> <br /> Arbolado Urbano <br />
-                    <em>como Semilla de la Resiliencia</em>
+                    <em>como Semilla de Resiliencia</em>
+
                 </h1>
             </div>
 
@@ -58,13 +64,13 @@ export default function PageRegistro({ goPage }) {
                             Gracias por registrarte. Recibirás un correo de confirmación con los detalles de tu participación
                             en el Foro
                         </p>
-                        <button
+                        {/* <button
                             className="ayc-btn-primary"
                             style={{ marginTop: "1.5rem" }}
                             onClick={() => goPage("toolkit")}
                         >
                             <i className="fa fa-box-open" /> Explorar el Toolkit
-                        </button>
+                        </button> */}
                     </div>
                 ) : (
                     <form onSubmit={handleSubmit}>
@@ -175,6 +181,17 @@ export default function PageRegistro({ goPage }) {
                                                 </label>
                                             ))
                                         }
+
+                                        {q.conditionalText && formData[q.num] === q.conditionalText.trigger && (
+                                            <textarea
+                                                className="ayc-input"
+                                                placeholder={q.conditionalText.placeholder}
+                                                rows={3}
+                                                required
+                                                value={formData[`${q.num}_extra`] ?? ""}
+                                                onChange={e => handleChange(`${q.num}_extra`, e.target.value)}
+                                            />
+                                        )}
                                     </div>
                                 </div>
                             );
@@ -186,7 +203,16 @@ export default function PageRegistro({ goPage }) {
                             </p>
                         )}
 
-                        <div style={{ textAlign: "center", marginTop: "2rem" }}>
+                        <label className="ayc-q-option" style={{ marginTop: "2rem", justifyContent: "center" }}>
+                            <input
+                                type="checkbox"
+                                checked={boletin}
+                                onChange={e => setBoletin(e.target.checked)}
+                            />
+                            Deseo recibir el boletín de Reforestamos México
+                        </label>
+
+                        <div style={{ textAlign: "center", marginTop: "1.5rem" }}>
                             <button type="submit" className="ayc-btn-submit" disabled={loading}>
                                 {loading
                                     ? <><i className="fa fa-spinner fa-spin" /> Enviando...</>

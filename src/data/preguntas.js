@@ -1,6 +1,6 @@
 export const BLOQUES = {
-  A: { label: "A · Datos personales",              border: "#036935" },
-  B: { label: "B · Participacion en el evento",    border: "#036935" },
+  A: { label: "A · Datos personales",              border: "#feae22" },
+  B: { label: "B · Participacion en el evento",    border: "#feae22" },
   C: { label: "C · Perfil profesional",            border: "#036935" },
   D: { label: "D · Confirmacion",                  border: "#036935" },
 };
@@ -43,7 +43,7 @@ export const PREGUNTAS = [
     bloque: "A",
     label: "Institución, organización o colectivo al que perteneces (si aplica)",
     tipo: "text",
-    placeholder: "Ej. Puerto Vallarta, Jalisco",
+    placeholder: "Ej. Reforestamos México, A.C.",
     required: true,
   }, 
   {
@@ -62,8 +62,7 @@ export const PREGUNTAS = [
     required: true,
     opts: [
       "Femenino",
-      "Masculino", 
-      "Prefiero no decirlo",
+      "Masculino",
     ],
   },  
   {
@@ -86,28 +85,28 @@ export const PREGUNTAS = [
     num: "09",
     bloque: "B",
     label: "¿Qué días planeas asisttir al foro?",
-    tipo: "select",
+    tipo: "checkbox",
+    name: "q_09",
     required: true,
     opts: [
+      "27 de mayo (Capacitaciones ténicas)",
       "28 de mayo (sesión cabildo)",
       "29 de mayo (conferencias y mesas de trabajo)",
-      "27 y 28 de mayo (capacitaciones)",
-      "30 de mayo (recorrido cultural)"
+      "30 de mayo (recorrido cultural)",
     ],
   },
   {
     num: "10",
     bloque: "B",
     label: "¿Te interesa participar en algunas de las siguientes actividades?",
-    tipo: "select",
+    tipo: "checkbox",
+    name: "q_10",
     required: true,
     opts: [
-      "Conferencias magistrales ",
+      "Conferencias",
       "Mesas de trabajo temáticas",
-      "Feria de arboricultura ",
-      "Reforestaciones comunitarias",
-      "Talleres o certificaciones técnicas",
-      "Actividades culturales (música, arte, recorridos)",
+      "Capacitaciones técnicas",
+      "Construcción de la ley de bosque y arbolado urbano.",
     ],
   },
     {
@@ -128,21 +127,23 @@ export const PREGUNTAS = [
     tipo: "radio",
     name: "q6",
     required: true,
-    opts: [
-      "Si",
-      "No"
-    ],
+    opts: ["Si", "No"],
+    conditionalText: {
+      trigger: "Si",
+      placeholder: "Describe brevemente tu propuesta, iniciativa o ponencia...",
+    },
   },
   {
     num: "13",
     bloque: "B",
     label: "¿Tienes alguna necesidad especial o requerimiento de accesibilidad? ",
-    tipo: "checkbox",
+    tipo: "radio",
     name: "q7",
     required: false,
-    opts: [
-      "Si",
-      "No",
-    ],
+    opts: ["Si", "No"],
+    conditionalText: {
+      trigger: "Si",
+      placeholder: "Describe tu requerimiento de accesibilidad...",
+    },
   },
 ];

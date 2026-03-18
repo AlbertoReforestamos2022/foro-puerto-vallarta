@@ -2,18 +2,18 @@ export const PROGRAMA = {
     dia1: [
     {
       hora: "09:00",
-      titulo: "Capacitaciones ténicas (REGISTRO PREVIO)",
+      titulo: "Capacitaciones técnicas (REGISTRO PREVIO)",
       tipo: "CUPO LIMITADO",
     },
   ],
   dia2: [
     {
       hora: "09:00",
-      titulo: "Capacitaciones técnicas",
+      titulo: "Capacitaciones técnicas (REGISTRO PREVIO)",
       tipo: "CUPO LIMITADO",
     },
     {
-      hora: "17:00 - ",
+      hora: "17:00",
       titulo: "Rueda de prensa",
       tipo: "",
     },
@@ -74,7 +74,7 @@ export const PROGRAMA = {
     {
       hora: "09:00",
       titulo: "Recorridos por infraestructura verde, arbolado urbano y estero el Salado",
-      tipo: "Pedro Calaza · Espana",
+      tipo: "CUPO LIMITADO",
     },
   ],  
 };
