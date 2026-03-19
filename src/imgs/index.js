@@ -10,7 +10,8 @@ export { default as arcosPuertoVallartaHero } from './Arcos_puerto_vallarta_hero
 export { default as arcosPuertoVallartaSolo } from './Arcos-puerto-vallarta-solo.png'; 
 export { default as arcosPuertoVallartaMar  } from './Arcos_puerto_vallarta_con-mar.png'; 
 export { default as arcosdePiedra           } from './Arcos_de_piedra_junto_al_mar.png';
- 
+export { default as arcosCopiaFinal         } from  './arcos_copia_2.png';
+  
 // Logos
 import logoReforestamos    from './logo RM blanco transparente.png';
 import logoArborDay        from './logo arbor day blanco.png';

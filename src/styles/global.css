@@ -142,7 +142,7 @@ a {
     Hero 
 ===============================================================*/
 .ayc-hero {
-    min-height: 100vh;
+    min-height: 140vh;
     background:
         linear-gradient(to bottom, rgba(0, 0, 0, .4) 0%, rgba(0, 0, 0, .3) 60%, rgba(0, 0, 0, .2) 100%),
         url('../imgs/bacgroundPrincipal.png') center/cover  no-repeat;
@@ -202,10 +202,9 @@ a {
 
 .ayc-hero-imagen {
   position: absolute;
-  bottom: 9vh;
-  left: 30%;
+  bottom: 13vh;
   z-index: 2;
-  width: clamp(250px, 18vw, 260px);
+  width: clamp(950px, 18vw, 260px);
 }
 
 .ayc-hero-imagen img {
@@ -330,7 +329,7 @@ a {
 .ayc-hero-logos img {
   width: 100%;
   height: auto;
-  max-height: 120px;
+  max-height: 125px;
   object-fit: contain;
 }
 

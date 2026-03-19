@@ -1,4 +1,4 @@
-import { backgroundPtincipal, CAJAAGUA, logoArborDay, logoTCOW, logoPuertoVallarta, LogosJuntos, arcosVallarta, arcosPuertoVallartaHero, arcosPuertoVallartaSolo, arcosPuertoVallartaMar, LogosJuntosVerde } from '../../imgs'; 
+import { backgroundPtincipal, CAJAAGUA, logoArborDay, logoTCOW, logoPuertoVallarta, LogosJuntos, arcosVallarta, arcosPuertoVallartaHero, arcosPuertoVallartaSolo, arcosPuertoVallartaMar, arcosCopiaFinal, LogosJuntosVerde } from '../../imgs'; 
 
 export default function Hero({ goPage }) {
   const scrollRegistro = () =>
@@ -46,7 +46,7 @@ export default function Hero({ goPage }) {
     </div>
 
     <div className="ayc-hero-imagen">
-      <img src={ arcosPuertoVallartaMar } alt="" />
+      <img src={ arcosCopiaFinal } alt="" />
     </div>
 
     <div className="ayc-hero-logos">

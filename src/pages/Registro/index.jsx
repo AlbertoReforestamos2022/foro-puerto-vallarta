@@ -35,6 +35,19 @@ export default function PageRegistro({ goPage }) {
 
             registro.boletin = boletin;
             await addDoc(collection(db, "registros"), registro);
+
+            // Enviar correos vía PHP proxy en SiteGround
+            await fetch(import.meta.env.VITE_EMAIL_API_URL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    nombre: formData["01"] ?? "",
+                    correo: formData["02"] ?? "",
+                    ...formData,
+                    boletin,
+                }),
+            });
+
             setSubmited(true);
             window.scrollTo({ top: 0, behavior: "smooth" });
         } catch (err) {
