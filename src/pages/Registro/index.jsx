@@ -4,6 +4,8 @@ import { db } from "../../firebase";
 import { PREGUNTAS, BLOQUES } from "../../data/preguntas";
 import Footer from "../../components/Footer";
 
+import { backgroundPtincipal } from '../../imgs'; 
+
 
 export default function PageRegistro({ goPage }) {
     const [submited, setSubmited] = useState(false);
@@ -64,13 +66,16 @@ export default function PageRegistro({ goPage }) {
                             Gracias por registrarte. Recibirás un correo de confirmación con los detalles de tu participación
                             en el Foro
                         </p>
-                        {/* <button
+                        {/* Reemplaza href por la ruta del PDF cuando esté listo */}
+                        <a
+                            href={ backgroundPtincipal }
+                            target="_blank"
+                            rel="noreferrer"
                             className="ayc-btn-primary"
-                            style={{ marginTop: "1.5rem" }}
-                            onClick={() => goPage("toolkit")}
+                            style={{ marginTop: "1.5rem", display: "inline-flex", alignItems: "center", gap: ".6rem" }}
                         >
-                            <i className="fa fa-box-open" /> Explorar el Toolkit
-                        </button> */}
+                            <i className="fa fa-file-pdf" /> Descargar documento del evento
+                        </a>
                     </div>
                 ) : (
                     <form onSubmit={handleSubmit}>
@@ -209,7 +214,7 @@ export default function PageRegistro({ goPage }) {
                                 checked={boletin}
                                 onChange={e => setBoletin(e.target.checked)}
                             />
-                            Deseo recibir el boletín de Reforestamos México
+                            Deseo suscribirme al boletín informativo de Reforestamos México
                         </label>
 
                         <div style={{ textAlign: "center", marginTop: "1.5rem" }}>

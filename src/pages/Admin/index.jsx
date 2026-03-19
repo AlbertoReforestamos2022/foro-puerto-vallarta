@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { signInWithEmailAndPassword, signOut, onAuthStateChanged } from "firebase/auth";
-import { collection, getDocs, orderBy, query } from "firebase/firestore";
+import { collection, getDocs, orderBy, query, doc, updateDoc } from "firebase/firestore";
 import { db, auth } from "../../firebase";
 import { PREGUNTAS } from "../../data/preguntas";
 
@@ -11,7 +11,8 @@ export default function PageAdmin() {
     const [authError,   setAuthError]   = useState(null);
     const [loading,     setLoading]     = useState(false);
     const [registros,   setRegistros]   = useState([]);
-    const [loadingData, setLoadingData] = useState(false);
+    const [loadingData,  setLoadingData]  = useState(false);
+    const [enviando,     setEnviando]     = useState(new Set());
 
     useEffect(() => {
         const unsub = onAuthStateChanged(auth, (u) => {
@@ -81,6 +82,57 @@ export default function PageAdmin() {
         a.download = "registros-foro.csv";
         a.click();
         URL.revokeObjectURL(url);
+    };
+
+    const enviarConfirmacion = async (registro) => {
+        const correo = registro["P02_Correo electronico"];
+        const nombre = registro["P01_Nombre completo"];
+        if (!correo) return alert("Este registro no tiene correo.");
+
+        setEnviando(prev => new Set(prev).add(registro.id));
+        try {
+            const res = await fetch("https://api.resend.com/emails", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Authorization": `Bearer ${import.meta.env.VITE_RESEND_API_KEY}`,
+                },
+                body: JSON.stringify({
+                    from: "Foro Arbolado Urbano <info@reforestamos.org>",
+                    to:   [correo],
+                    subject: "Confirmación de registro — Foro Arbolado Urbano 2026",
+                    html: `
+                        <div style="font-family:sans-serif;max-width:600px;margin:0 auto;color:#222">
+                            <div style="background:#036935;padding:2rem;border-radius:12px 12px 0 0;text-align:center">
+                                <h1 style="color:#fff;margin:0;font-size:1.4rem">Foro Arbolado Urbano</h1>
+                                <p style="color:#a8d5b5;margin:.5rem 0 0">como Semilla de la Resiliencia</p>
+                            </div>
+                            <div style="background:#fff;padding:2rem;border:1px solid #eee;border-radius:0 0 12px 12px">
+                                <p>Hola <strong>${nombre}</strong>,</p>
+                                <p>Tu registro al <strong>Foro Tree Cities of the World México 2026</strong> ha sido confirmado exitosamente.</p>
+                                <div style="background:#f4f9f6;border-radius:8px;padding:1rem 1.5rem;margin:1.5rem 0">
+                                    <p style="margin:0"><strong>📅 Fecha:</strong> 28 y 29 de mayo de 2026</p>
+                                    <p style="margin:.5rem 0 0"><strong>📍 Lugar:</strong> Hotel Velas Vallarta, Puerto Vallarta</p>
+                                </div>
+                                <p>Próximamente recibirás más información sobre el programa y actividades.</p>
+                                <p style="margin-top:2rem;color:#888;font-size:.85rem">
+                                    Reforestamos México · <a href="https://reforestamos.org" style="color:#036935">reforestamos.org</a>
+                                </p>
+                            </div>
+                        </div>
+                    `,
+                }),
+            });
+
+            if (!res.ok) throw new Error(await res.text());
+
+            await updateDoc(doc(db, "registros", registro.id), { confirmacionEnviada: true });
+            setRegistros(prev => prev.map(r => r.id === registro.id ? { ...r, confirmacionEnviada: true } : r));
+        } catch (err) {
+            alert("Error al enviar: " + err.message);
+        } finally {
+            setEnviando(prev => { const s = new Set(prev); s.delete(registro.id); return s; });
+        }
     };
 
     /* ── LOGIN ──────────────────────────────────────────────── */
@@ -177,6 +229,7 @@ export default function PageAdmin() {
                                 <th style={styles.th}>P12 detalle</th>
                                 <th style={styles.th}>P13 detalle</th>
                                 <th style={styles.th}>Boletín</th>
+                                <th style={styles.th}>Confirmación</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -200,12 +253,26 @@ export default function PageAdmin() {
                                                 ? <span style={styles.badgeYes}>Sí</span>
                                                 : <span style={styles.badgeNo}>No</span>}
                                         </td>
+                                        <td style={{ ...styles.td, textAlign: "center" }}>
+                                            {r.confirmacionEnviada
+                                                ? <span style={styles.badgeYes}>Enviado</span>
+                                                : <button
+                                                    style={styles.btnEnviar}
+                                                    disabled={enviando.has(r.id)}
+                                                    onClick={() => enviarConfirmacion(r)}
+                                                >
+                                                    {enviando.has(r.id)
+                                                        ? <><i className="fa fa-spinner fa-spin" /> Enviando...</>
+                                                        : <><i className="fa fa-envelope" /> Enviar</>}
+                                                </button>
+                                            }
+                                        </td>
                                     </tr>
                                 );
                             })}
                             {!registros.length && (
                                 <tr>
-                                    <td colSpan={PREGUNTAS.length + 5} style={{ ...styles.td, textAlign: "center", color: "#aaa" }}>
+                                    <td colSpan={PREGUNTAS.length + 6} style={{ ...styles.td, textAlign: "center", color: "#aaa" }}>
                                         Sin registros aún.
                                     </td>
                                 </tr>
@@ -249,4 +316,5 @@ const styles = {
     trEven:      { background: "#f9fdf9" },
     badgeYes:    { background: "#e6f4ed", color: "#036935", borderRadius: 20, padding: ".2rem .7rem", fontWeight: 600, fontSize: ".78rem" },
     badgeNo:     { background: "#f0f0f0", color: "#888", borderRadius: 20, padding: ".2rem .7rem", fontWeight: 600, fontSize: ".78rem" },
+    btnEnviar:   { padding: ".3rem .9rem", borderRadius: 20, border: "none", background: "#036935", color: "#fff", fontWeight: 600, cursor: "pointer", fontSize: ".78rem" },
 };
