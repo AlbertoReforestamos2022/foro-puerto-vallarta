@@ -26,13 +26,13 @@ export const PROGRAMA = {
     },
     {
       hora: "10:00",
-      titulo: "Conferencia Magistral ",
-      tipo: "Conferencia Magistral · Urbanismo social, Infraestructura verde",
+      titulo: "Panel de alcaldes ",
+      tipo: "",
     },
     {
       hora: "10:40",
       titulo: "Trees & Tech – Innovación aplicada al arbolado urbano ",
-      tipo: "Ian Hanou, CEO de Plant-it Geo",
+      tipo: "Ponentes: Ian Hanou, CEO de Plant-it Geo",
     },
     {
       hora: "",
@@ -42,17 +42,17 @@ export const PROGRAMA = {
     {
       hora: "11:00",
       titulo: "Panel de discusión sobre levantamiento de inventarios en TCW Trees & Tech",
-      tipo: "Ponentes: Armando (Microsoft) - Ernesto (Reforestamos México) - Google .  Mexico",
+      tipo: "Ponentes: Sophie Plitt ",
     },
     {
       hora: "12:00",
       titulo: "Cultura, resiliencia y recuperación post-desastre ",
-      tipo: "Mariano Sánchez ",
+      tipo: " Ponentes: Mariano Sánchez ",
     },
     {
       hora: "12:40",
       titulo: "Cultura, resiliencia y recuperación post-desastre ",
-      tipo: "Mariano Sánchez ",
+      tipo: "Ponentes: Dra. Sandra Quijas",
     },    
     {
       hora: "",
