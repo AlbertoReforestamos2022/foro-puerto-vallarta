@@ -1,5 +1,5 @@
 import Reveal from "../../components/Reveal";
-import { arcosVallarta, arcosPuertoVallartaHero  } from '../../imgs'; 
+import { arcosVallarta, arcosPuertoVallartaHero, arcosdePiedra  } from '../../imgs'; 
 
 export default function Sobre() {
   return (
@@ -9,7 +9,7 @@ export default function Sobre() {
           <div className="ayc-sobre-grid">
             <div className="ayc-sobre-img">
               <img
-                src={arcosPuertoVallartaHero}
+                src={arcosdePiedra}
                 alt="Arboles urbanos"
               />
             </div>
