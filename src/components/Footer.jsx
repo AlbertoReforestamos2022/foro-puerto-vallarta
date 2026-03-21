@@ -12,7 +12,7 @@ export default function Footer({ goPage }) {
 
             <div className="ayc-footer-links">
                 <a href="https://www.reforestamosmexico.org/aviso-de-privacidad/" target='_blank'>Aviso de privacidad</a>
-                <a onClick={() => goPage("registro")}>Registro</a>
+                <a onClick={() => goPage("#registro")}>Registro</a>
                 <a href="https://www.reforestamosmexico.org" target="_blank" rel="noreferrer">Reforestamos México</a>
 
             </div>

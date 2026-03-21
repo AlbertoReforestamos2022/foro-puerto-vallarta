@@ -142,16 +142,16 @@ a {
     Hero 
 ===============================================================*/
 .ayc-hero {
-    min-height: 140vh;
+    min-height: unset;
     background:
         linear-gradient(to bottom, rgba(0, 0, 0, .4) 0%, rgba(0, 0, 0, .3) 60%, rgba(0, 0, 0, .2) 100%),
         url('../imgs/bacgroundPrincipal.png') center/cover  no-repeat;
     display: flex; 
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     text-align: center; 
-    padding: 120px 2rem 160px;
+    padding: 120px 0 0;
     position: relative; 
     overflow: hidden;
 }
@@ -319,18 +319,15 @@ a {
     Barra con logos
   ============================================================ */
 .ayc-hero-logos {
-  position: absolute;
-  bottom: -1%;
-  right: 0;
-  left: 0;
-  z-index: 5;
+  width: 100%;
+  margin-top: auto;
 }
 
 .ayc-hero-logos img {
   width: 100%;
   height: auto;
-  max-height: 125px;
-  object-fit: contain;
+  display: block;
+  margin: 0 auto;
 }
 
 /* ==============================================================
@@ -419,6 +416,12 @@ a {
 .ayc-body { color: #555; line-height: 1.8; max-width: 600px; }
 
 
+.ayc-h2-registro::after{
+  content: ''; display: block;
+  width: 200px; height: 4px; margin-top: 10px; background: var(--c-claro);
+  margin-left: 0;
+}
+
 /* ==============================================================
    SECCION SOBRE
 ================================================================= */
@@ -429,6 +432,7 @@ a {
 
 .ayc-sobre-img {
   border-radius: 16px; overflow: hidden; position: relative;
+  background: url('../imgs/bacgroundPrincipal.png') center / cover no-repeat;
   box-shadow: 0 20px 60px rgba(26,61,56,.2);
 }
 
@@ -570,7 +574,7 @@ a {
 }
 
 .ayc-reg-bg {
-  height: 160px; display: flex; align-items: flex-end;
+  height: 160px; display: grid; align-items: center; justify-content: center;
   padding: 1.5rem; position: relative;
 }
 
@@ -584,7 +588,7 @@ a {
   font-size: 1.4rem; color: #fff; font-weight: 700;
 }
 
-.ayc-reg-body { background: #fff; padding: 1.4rem; }
+.ayc-reg-body { background: #fff; padding: 1.4rem; display: grid; justify-items: center;}
 
 .ayc-reg-desc { font-size: .83rem; color: #666; line-height: 1.6; margin-bottom: 1rem; }
 
@@ -620,7 +624,7 @@ a {
 
 .ayc-q-block-title {
   font-family: 'Playfair Display', serif; font-size: 1.1rem;
-  color: var(--c-oscuro); font-weight: 700;
+  color: var(--c-naranja); font-weight: 700;
   margin: 2rem 0 1rem; padding-bottom: .5rem;
 }
 

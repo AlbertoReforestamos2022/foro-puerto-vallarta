@@ -1,8 +1,6 @@
 export const BLOQUES = {
   A: { label: "A · Datos personales",              border: "#feae22" },
-  B: { label: "B · Participacion en el evento",    border: "#feae22" },
-  C: { label: "C · Perfil profesional",            border: "#036935" },
-  D: { label: "D · Confirmacion",                  border: "#036935" },
+  B: { label: "B · Participación en el evento",    border: "#feae22" },
 };
 
 export const PREGUNTAS = [
@@ -17,7 +15,7 @@ export const PREGUNTAS = [
   {
     num: "02",
     bloque: "A",
-    label: "Correo electronico",
+    label: "Correo electrónico",
     tipo: "email",
     placeholder: "Ej. maria@municipio.gob.mx",
     required: true,
@@ -25,7 +23,7 @@ export const PREGUNTAS = [
   {
     num: "03",
     bloque: "A",
-    label: "Número de tleéfono",
+    label: "Número de télefono",
     tipo: "number",
     placeholder: "Ej. 55 12345678",
     required: true,
@@ -49,7 +47,7 @@ export const PREGUNTAS = [
   {
     num: "06",
     bloque: "A",
-    label: "Rango de edad",
+    label: "Edad",
     tipo: "number",
     placeholder: "Ej. 34 ",
     required: true,
@@ -57,12 +55,13 @@ export const PREGUNTAS = [
   {
     num: "07",
     bloque: "A",
-    label: "Genero",
+    label: "Género",
     tipo: "select",
     required: true,
     opts: [
       "Femenino",
       "Masculino",
+      "Prefiero no decirlo",
     ],
   },  
   {
@@ -84,7 +83,7 @@ export const PREGUNTAS = [
   {
     num: "09",
     bloque: "B",
-    label: "¿Qué días planeas asisttir al foro?",
+    label: "¿Qué días planeas asistir al foro?",
     tipo: "checkbox",
     name: "q_09",
     required: true,
@@ -98,7 +97,7 @@ export const PREGUNTAS = [
   {
     num: "10",
     bloque: "B",
-    label: "¿Te interesa participar en algunas de las siguientes actividades?",
+    label: "¿En qué actividades te interesa participar?",
     tipo: "checkbox",
     name: "q_10",
     required: true,
@@ -127,9 +126,9 @@ export const PREGUNTAS = [
     tipo: "radio",
     name: "q6",
     required: true,
-    opts: ["Si", "No"],
+    opts: ["Sí", "No"],
     conditionalText: {
-      trigger: "Si",
+      trigger: "Sí",
       placeholder: "Describe brevemente tu propuesta, iniciativa o ponencia...",
     },
   },
@@ -140,9 +139,9 @@ export const PREGUNTAS = [
     tipo: "radio",
     name: "q7",
     required: false,
-    opts: ["Si", "No"],
+    opts: ["Sí", "No"],
     conditionalText: {
-      trigger: "Si",
+      trigger: "Sí",
       placeholder: "Describe tu requerimiento de accesibilidad...",
     },
   },

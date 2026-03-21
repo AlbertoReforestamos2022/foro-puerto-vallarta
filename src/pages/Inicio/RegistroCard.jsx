@@ -7,12 +7,12 @@ export default function RegistroCard({goPage}) {
         <section className="ayc-section ayc-section-cream" id="registro">
             <div className="ayc-container">
                 <Reveal>
-                    <div style={{ marginBottom: "2.5rem"}}>
-                        <h2 className="ayc-h2" style={{ maxwidth: "100%"}}>
+                    <div style={{ marginBottom: "2.5rem", textAlign: "center"}}>
+                        <h2 className="ayc-h2 ayc-h2-registro" style={{ display: "inline-block", textAlign:"left"}}>
                             Se parte del cambio
                         </h2>
 
-                        <span className="ayc-section-tag"> </span>
+                        <span className="ayc-section-tag" style={{textAlign: "center"} }> </span>
 
                         {/* <p style={{ color: "#666", margin: "0 auto", lineHeight: 1.7 }}>
                         Elige la modalidad que mejor se adapte a tu perfil y asegura tu lugar
@@ -29,6 +29,7 @@ export default function RegistroCard({goPage}) {
                                 bg:     `linear-gradient(135deg, #3d6b63, ${C.medio})`,
                                 imgBg:  `${backgroundPtincipal}`,
                                 btnBg:  C.naranja,
+                                txtBtn: "Registrarme al evento",  
                                 desc:   "Accede a las conferencias magistrales, paneles de discusion, ceremonia de reconocimiento y la reforestacion masiva del sabado.",
                             },
                             // {
@@ -49,7 +50,7 @@ export default function RegistroCard({goPage}) {
                                     <p className="ayc-reg-desc">{r.desc}</p>
 
                                     <button className="ayc-btn-reg" onClick={()=> goPage("registro")} style={{ background: r.btnBg }}>
-                                        <i className="fa fa-arrrow-right" /> {r.label}
+                                        <i className="fa fa-arrrow-right" /> {r.txtBtn}
                                     </button>
                                 </div>
                             </div>

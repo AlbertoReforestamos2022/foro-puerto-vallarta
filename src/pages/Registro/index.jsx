@@ -13,6 +13,7 @@ export default function PageRegistro({ goPage }) {
     const [error,    setError]    = useState(null);
     const [formData, setFormData] = useState({});
     const [boletin,  setBoletin]  = useState(false);
+    const [infoReforestamos, setInfoReforestamos] = useState(false);
 
     const handleChange = (num, value) => {
         setFormData(prev => ({ ...prev, [num]: value }));
@@ -34,10 +35,11 @@ export default function PageRegistro({ goPage }) {
             });
 
             registro.boletin = boletin;
+            registro.infoReforestamos = infoReforestamos;
             await addDoc(collection(db, "registros"), registro);
 
-            // Enviar correos vía PHP proxy en SiteGround
-            await fetch(import.meta.env.VITE_EMAIL_API_URL, {
+            // Enviar correos vía PHP proxy (solo en producción)
+            if (import.meta.env.VITE_EMAIL_API_URL && !window.location.hostname.includes('localhost')) await fetch(import.meta.env.VITE_EMAIL_API_URL, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
@@ -45,6 +47,7 @@ export default function PageRegistro({ goPage }) {
                     correo: formData["02"] ?? "",
                     ...formData,
                     boletin,
+                    infoReforestamos,
                 }),
             });
 
@@ -64,8 +67,8 @@ export default function PageRegistro({ goPage }) {
         <>
             <div className="ayc-diag-hero">
                 <h1>
-                    Registro al Foro <br /> <br /> Arbolado Urbano <br />
-                    <em>como Semilla de Resiliencia</em>
+                    Registro al Foro <br /> <br /> "Arbolado Urbano <br />
+                    <em>como Semilla de Resiliencia"</em>
 
                 </h1>
             </div>
@@ -110,7 +113,6 @@ export default function PageRegistro({ goPage }) {
                                     )}
 
                                     <div className={`ayc-q-card ${q.accent === "orange" ? "orange" : ""}`}>
-                                        <div className="ayc-q-num">Pregunta {q.num}</div>
                                         <div className="ayc-q-label">{q.label}</div>
 
                                         {q.tipo === "text" && (
@@ -221,13 +223,22 @@ export default function PageRegistro({ goPage }) {
                             </p>
                         )}
 
-                        <label className="ayc-q-option" style={{ marginTop: "2rem", justifyContent: "center" }}>
+                        <label className="ayc-q-option" style={{ marginTop: "2rem", justifyContent: "center", textAlign: "center"}}>
                             <input
                                 type="checkbox"
                                 checked={boletin}
                                 onChange={e => setBoletin(e.target.checked)}
                             />
-                            Deseo suscribirme al boletín informativo de Reforestamos México
+                            Deseo suscribirme al boletín informativo Reforestamos México
+                        </label>
+
+                        <label className="ayc-q-option" style={{ marginTop: "1rem", justifyContent: "center", textAlign: "center"}}>
+                            <input
+                                type="checkbox"
+                                checked={infoReforestamos}
+                                onChange={e => setInfoReforestamos(e.target.checked)}
+                            />
+                            Deseo recibir información de Reforestamos México
                         </label>
 
                         <div style={{ textAlign: "center", marginTop: "1.5rem" }}>

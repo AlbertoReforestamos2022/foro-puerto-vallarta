@@ -3,14 +3,16 @@ export { default as backgroundPtincipal }          from './bacgroundPrincipal.pn
 export { default as backgroundPtincipalVerde }     from './background-principal-verde.png';
 export { default as backgroundVallartaHero }       from './arcos_vallarta_background_hero.png';
 
-export { default as backgroundPrograma      } from './programabackground.png';
-export { default as CAJAAGUA                } from './CAJAAGUA.png'; 
-export { default as arcosVallarta           } from './arcos-pv-1024x576.jpg';
-export { default as arcosPuertoVallartaHero } from './Arcos_puerto_vallarta_hero.png'; 
-export { default as arcosPuertoVallartaSolo } from './Arcos-puerto-vallarta-solo.png'; 
-export { default as arcosPuertoVallartaMar  } from './Arcos_puerto_vallarta_con-mar.png'; 
-export { default as arcosdePiedra           } from './Arcos_de_piedra_junto_al_mar.png';
+export { default as backgroundPrograma      } from  './programabackground.png';
+export { default as CAJAAGUA                } from  './CAJAAGUA.png'; 
+export { default as arcosVallarta           } from  './arcos-pv-1024x576.jpg';
+export { default as arcosPuertoVallartaHero } from  './Arcos_puerto_vallarta_hero.png'; 
+export { default as arcosPuertoVallartaSolo } from  './Arcos-puerto-vallarta-solo.png'; 
+export { default as arcosdePiedra           } from  './Arcos_de_piedra_junto_al_mar.png';
 export { default as arcosCopiaFinal         } from  './arcos_copia_2.png';
+export { default as logosArcoForoHero       } from  './Logos-arco-foro-hero.png';
+export { default as fondoArcoLogos          } from  './fondo-hero-para web.png';
+export { default as fondoArcosMovil         } from  './Logos-arco-foro-hero-movil.png' 
   
 // Logos
 import logoReforestamos    from './logo RM blanco transparente.png';
