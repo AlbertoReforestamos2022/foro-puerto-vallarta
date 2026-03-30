@@ -31,6 +31,7 @@ export {  default as logoReforestamosVerde   }    from './LOGO REFORESTAMOS FOND
 export { default as fotoErnesto }             from './foto-ernesto.jpg';
 export { default as fotoSophie  }             from './foto-sophie.png';  
 export { default as fotoIan     }             from './Foto-Ian-Hanou.jpg'; 
+export { default as fotoSandra  }             from './sandra-quijas.jpg'; 
 
 
 // objeto logos footer

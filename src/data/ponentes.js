@@ -1,5 +1,5 @@
 import { C } from "../styles/tokens";
-import { fotoErnesto, fotoSophie, fotoIan } from "../imgs";
+import { fotoErnesto, fotoSophie, fotoIan, fotoSandra } from "../imgs";
 
 export const INVITADOS = [
   {
@@ -30,11 +30,11 @@ export const INVITADOS = [
     bg: `linear-gradient(135deg, #b34d00, ${C.naranja})`,
   },
   {
-    nombre: "Mariano Sanchez",
+    nombre: "Dra. Sandra Quijas",
     tema: "",
-    pais: "España",
-    organizacion: "Presidente - Asociación Española de Arboricultura",
-    emoji: "Mauricio",
+    pais: "",
+    organizacion: "Investigadora del Centro Universitario de la Costa de la Universidad de Guadalajara",
+    img: `${fotoSandra}`,
     bg: `linear-gradient(135deg, #b34d00, ${C.naranja})`,
   }
 ];
